@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { useState } from 'react';
+import BballData from './components/bball-data';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [value, setValue] = useState("");
+
+    return (
+        <div className="container flex-center">
+            <div className="search-box flex-center">
+                Basketball teams (2019-2020)
+            </div>
+              <BballData />
+        </div>
+    );
 }
 
 export default App;
